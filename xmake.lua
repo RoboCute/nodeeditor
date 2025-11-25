@@ -12,15 +12,6 @@ rule("qt.mywidget")
         local frameworks = {"QtGui", "QtWidgets", "QtCore", "QtOpenGL"}
         import("load")(target, {gui = true, frameworks = frameworks})
     end)
-
-    -- deploy application
-    after_build("android", "deploy.android")
-    after_build("macosx", "deploy.macosx")
-
-    -- install application for android
-    on_install("android", "install.android")
-    after_install("windows", "install.windows")
-    after_install("mingw", "install.mingw")
 rule_end()
 
 
