@@ -1,6 +1,6 @@
 target("calculator")
     set_kind("binary")
-    add_rules("qt.widgetapp")
+    add_rules("qt.mywidget")
     add_files(
         "main.cpp",
         "MathOperationDataModel.cpp",
